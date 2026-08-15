@@ -131,20 +131,6 @@ class CloakbrowserDriverWrapper:
 
         self._init_driver()
 
-    # def _build_launch_kwargs(self) -> dict:
-    #     """Build the keyword arguments dict used when launching the Chromium browser."""
-    #     kwargs = {
-    #         "headless": True,
-    #         "args": [
-    #             "--no-sandbox",
-    #             "--ignore-certificate-errors",
-    #             f"--window-size={self.window_width},{self.window_height}",
-    #         ],
-    #     }
-    #     if self.proxy:
-    #         kwargs["proxy"] = {"server": self.proxy}
-    #     return kwargs
-
     def _reset_state(self):
         """Reset internal per-navigation state (captured requests list)."""
         self._captured_requests = []

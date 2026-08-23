@@ -45,7 +45,7 @@ def reverse_migrate(apps, schema_editor):
 class Migration(migrations.Migration):
     atomic = False
     dependencies = [
-        ("analyzers_manager", "0181_analyzer_config_phishing_engine_param"),
-    ]
-
+    ("playbooks_manager", "0068_add_rdap_to_free_to_use"),
+    ("analyzers_manager", "0181_analyzer_config_phishing_engine_param"),
+]
     operations = [migrations.RunPython(migrate, reverse_migrate)]

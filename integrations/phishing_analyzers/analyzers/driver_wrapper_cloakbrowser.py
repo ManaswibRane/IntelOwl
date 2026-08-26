@@ -85,7 +85,7 @@ def playwright_exception_handler(func):
             return func(self, *args, **kwargs)
         except PlaywrightError as e:
             logger.exception(
-                f"PlaywrightError while performing {func.__name__}"
+                f"Error while performing {func.__name__}"
                 f"{' for url=' + url if func.__name__ == 'navigate' else ''}: {e}"
             )
             self.restart(motivation=func.__name__, timeout_wait_page=5)
@@ -266,7 +266,7 @@ class CloakbrowserDriverWrapper:
 
     def restart(self, motivation: str = "", timeout_wait_page: int = 0):
         """Close and re-launch the browser, then re-navigate to the last visited URL if available."""
-        logger.info(f"Restarting Playwright driver: {motivation=}")
+        logger.info(f"Restarting driver: {motivation=}")
         self._close_browser()
         self._browser = launch()
         self._create_context_and_page()
@@ -355,7 +355,7 @@ class CloakbrowserDriverWrapper:
                 {
                     "log": {
                         "version": "1.2",
-                        "creator": {"name": "IntelOwl-Playwright", "version": "1.0"},
+                        "creator": {"name": "IntelOwl-Cloakbrowse", "version": "1.0"},
                         "entries": [],
                     }
                 }

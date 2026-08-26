@@ -5,8 +5,6 @@ from api_app.analyzers_manager.observable_analyzers.phishing.phishing_extractor 
 )
 
 
-
-
 class CloakbrowserTestCase(TestCase):
     def test_cloakbrowser_engine(self):
         url="https://bot.sannysoft.com/"
@@ -17,5 +15,4 @@ class CloakbrowserTestCase(TestCase):
         analyzer.config({})
         result=analyzer.run()
         self.assertIsNotNone(result,f"Resullt is Null for {url}") # Basic test, Added screenshots of comparisons and metrics in https://github.com/intelowlproject/IntelOwl/pull/3940
-        
-        
+

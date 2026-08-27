@@ -1,3 +1,5 @@
+# This file is a part of IntelOwl https://github.com/intelowlproject/IntelOwl
+# See the file 'LICENSE' for copying permission.
 from unittest import TestCase
 
 from api_app.analyzers_manager.observable_analyzers.phishing.phishing_extractor import (

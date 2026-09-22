@@ -23,9 +23,7 @@ class CloakbrowserTestCase(TestCase):
         cls.result = analyzer.run()
 
     def test_cloakbrowser_engine(self):
-        self.assertIsNotNone(
-            self.result, f"Result is None for {self.URL}"
-        )  # Basic test
+        self.assertIsNotNone(self.result, f"Result is None for {self.URL}")  # Basic test
 
     def test_cloakbrowser_all_keys_returned(self):
         for key in ("page_source", "page_screenshot_base64", "page_http_traffic", "page_http_har"):
